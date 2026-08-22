@@ -6,6 +6,8 @@ I build applied AI/ML systems, with a current focus on retrieval-augmented gener
 
 ## Original projects
 
+- [logsentinel](https://github.com/Pangqiang-Gary/logsentinel) — A production-minded AIOps prototype for streaming log parsing, immutable model versioning, hot rollback, multi-tenant anomaly detection, and reproducible evaluation.
+
 - [multi_source_rag](https://github.com/Pangqiang-Gary/multi_source_rag) — Multi-source RAG with BM25 + dense retrieval, reciprocal-rank fusion, cross-encoder reranking, source weighting, and claim-level conflict detection.
 - [time-series-risk-alert](https://github.com/Pangqiang-Gary/time-series-risk-alert) — Transformer and classical-baseline pipeline for early sell-risk alerts across the S&P 500, QQQ, and DJI.
 - [CS562-final](https://github.com/Pangqiang-Gary/CS562-final) — Academic database project that turns MF-structure specifications into executable PostgreSQL queries.
