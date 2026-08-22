@@ -7,6 +7,7 @@ I build applied AI/ML systems, with a current focus on retrieval-augmented gener
 ## Original projects
 
 - [logsentinel](https://github.com/Pangqiang-Gary/logsentinel) — A production-minded AIOps prototype for streaming log parsing, immutable model versioning, hot rollback, multi-tenant anomaly detection, and reproducible evaluation.
+- [tradingagents-blind-eval](https://github.com/Pangqiang-Gary/tradingagents-blind-eval) — Original leakage-resistant evaluation tooling for pristine TradingAgents runs, with pre-event candidate freezing, isolated memory, sealed predictions, and post-cutoff scoring.
 
 - [multi_source_rag](https://github.com/Pangqiang-Gary/multi_source_rag) — Multi-source RAG with BM25 + dense retrieval, reciprocal-rank fusion, cross-encoder reranking, source weighting, and claim-level conflict detection.
 - [time-series-risk-alert](https://github.com/Pangqiang-Gary/time-series-risk-alert) — Transformer and classical-baseline pipeline for early sell-risk alerts across the S&P 500, QQQ, and DJI.
@@ -28,3 +29,4 @@ These are team contexts, not solo-project claims.
 ## Current interests
 
 `RAG` · `Agentic AI` · `LLM evaluation` · `Time-series ML` · `AI safety`
+
