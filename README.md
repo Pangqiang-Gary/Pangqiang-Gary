@@ -1,39 +1,46 @@
-# Gary — Applied AI/ML Engineer
+# Deqiang Ye · Gary
 
-I build evaluation-first AI systems: retrieval and ranking pipelines, agent workflows, time-series risk models, and production-minded ML services. I care about reproducibility, provenance, failure analysis, and making model claims testable.
+### Applied AI / ML Engineering
 
-`Python` · `PyTorch` · `FastAPI` · `PostgreSQL` · `Docker` · `GitHub Actions`
+I build retrieval systems, tool-using agents, and evaluation workflows. My work spans source-grounded document applications, agent integration, ML observability, and time-series research.
 
-## Selected engineering work
+`Python` · `PyTorch` · `FastAPI` · `LangGraph` · `PostgreSQL` · `Docker` · `TypeScript`
 
-| Project | Provenance | What it demonstrates | Evidence |
-|---|---|---|---|
-| [Multi-Source RAG](https://github.com/Pangqiang-Gary/multi_source_rag) | Original build | Source-specific ingestion, BM25+dense retrieval, weighted RRF, cross-encoder reranking, and explicit conflict handling | [Ablation report](https://github.com/Pangqiang-Gary/multi_source_rag/blob/main/report.md): reranking improved source-overlap hit rate from 75.0% to 91.7% |
-| [LogSentinel](https://github.com/Pangqiang-Gary/logsentinel) | Original build | Streaming log parsing, immutable model versions, atomic activation/rollback, tenant isolation, and online anomaly detection | [CI](https://github.com/Pangqiang-Gary/logsentinel/actions/workflows/ci.yml), 17 tests, 85% coverage, Loghub evaluation, Docker health check |
-| [Qlib US Walk-Forward Study](https://github.com/Pangqiang-Gary/qlib-us-walk-forward) | Independent research workflow built on [Microsoft Qlib](https://github.com/microsoft/qlib) | US-equity data adaptation, explicit parameter changes, three expanding-window folds, transaction costs, and a fail-closed research gate | The gate returns `RESEARCH_ONLY`: mean IC 0.0069, mean Rank IC -0.0053; attractive backtest returns are rejected as insufficient evidence |
-| [Native RAG](https://github.com/IDEAS-Incubator/LLM_Bootcamp_Native_RAG) | Team contribution | A deterministic Wiki compiler, a shared RAG Core facade, and a local FastAPI adapter in an organization repository | Three merged PRs: [compiler](https://github.com/IDEAS-Incubator/LLM_Bootcamp_Native_RAG/pull/1), [tested Core migration](https://github.com/IDEAS-Incubator/LLM_Bootcamp_Native_RAG/pull/4), and [API adapter](https://github.com/IDEAS-Incubator/LLM_Bootcamp_Native_RAG/pull/6) |
-| [TradingAgents Blind Eval](https://github.com/Pangqiang-Gary/tradingagents-blind-eval) | Original tooling around [TradingAgents](https://github.com/TauricResearch/TradingAgents) | Forward-only evaluation controls without claiming authorship of the upstream agent system | Candidate freezing, clean-commit verification, isolated memory, sealed predictions, post-cutoff scoring |
-| [Time-Series Risk Alert](https://github.com/Pangqiang-Gary/time-series-risk-alert) | Original research prototype | Chronological financial-ML evaluation with Transformer and classical baselines | Saved datasets, model checkpoint, calibration artifacts, threshold sweeps, and [v2 regime-analysis PR](https://github.com/Pangqiang-Gary/time-series-risk-alert/pull/2) |
-| [MF-Structure Query Generator](https://github.com/Pangqiang-Gary/CS562-final) | Team coursework; my implementation is identified in history | Parsing declarative MF specifications into executable PostgreSQL query processors | My [generator and test-case commit](https://github.com/Pangqiang-Gary/CS562-final/commit/82edc7d009d23c098d8fa68efd576f3fab7ceb1d), six reproducible cases, and [extended-cases PR](https://github.com/Pangqiang-Gary/CS562-final/pull/2) |
+## Selected projects
 
-## Engineering principles
+| Project | Engineering work | Evidence |
+| --- | --- | --- |
+| [Multi-Source RAG](https://github.com/Pangqiang-Gary/multi_source_rag) | Source-specific ingestion, BM25 and dense retrieval, weighted reciprocal-rank fusion, reranking, and claim-level conflict checks | [Ablations and failure analysis](https://github.com/Pangqiang-Gary/multi_source_rag/blob/main/report.md) |
+| [LogSentinel](https://github.com/Pangqiang-Gary/logsentinel) | Streaming log parsing, immutable model versions, atomic activation and rollback, tenant isolation, and anomaly detection | [Verification workflow](https://github.com/Pangqiang-Gary/logsentinel/actions/workflows/ci.yml) |
+| [Bank Capability Runner](https://github.com/Pangqiang-Gary/bank-capability-runner) | Computer-use discovery, typed capabilities, deterministic replay, guardrails, and operator handoff | [Implementation and usage](https://github.com/Pangqiang-Gary/bank-capability-runner) |
+| [TradingAgents Blind Evaluation](https://github.com/Pangqiang-Gary/tradingagents-blind-eval) | Original evaluation tooling around an upstream agent framework, with frozen candidates, isolated memory and sealed predictions | [Evaluation harness](https://github.com/Pangqiang-Gary/tradingagents-blind-eval) |
+| [Qlib US Walk-Forward Study](https://github.com/Pangqiang-Gary/qlib-us-walk-forward) | US-equity data adaptation, expanding-window evaluation, transaction costs and explicit research acceptance gates | [Methods and recorded results](https://github.com/Pangqiang-Gary/qlib-us-walk-forward) |
+| [Time-Series Risk Alert](https://github.com/Pangqiang-Gary/time-series-risk-alert) | Chronological evaluation of Transformer and classical risk-alert baselines | [Regime-analysis extension](https://github.com/Pangqiang-Gary/time-series-risk-alert/pull/2) |
 
-- **Evaluate before claiming.** I keep metrics, ablations, failure cases, and test commands beside the code.
-- **Separate evidence from prediction.** Evaluation harnesses freeze inputs and provenance before outcomes are available.
-- **Design for rollback and audit.** Versioned state, deterministic artifacts, and explicit boundaries matter as much as model code.
+## Team contributions
 
-## Ownership and attribution
+**Emergency-department knowledge retrieval.** Implemented Qdrant-backed knowledge search, an Agent 1 RAG workflow, portable structure-aware ingestion, and integration verification. Five merged pull requests document the progression. The organization repository requires collaborator access.
 
-I label repositories so authorship is unambiguous:
+[Vector store #3](https://github.com/IDEAS-Incubator/Agentic_Triage_System_for_Emergency_Departments/pull/3) · [Agent workflow #6](https://github.com/IDEAS-Incubator/Agentic_Triage_System_for_Emergency_Departments/pull/6) · [Portable ingestion #7](https://github.com/IDEAS-Incubator/Agentic_Triage_System_for_Emergency_Departments/pull/7) · [Integration #9](https://github.com/IDEAS-Incubator/Agentic_Triage_System_for_Emergency_Departments/pull/9) · [Verification #10](https://github.com/IDEAS-Incubator/Agentic_Triage_System_for_Emergency_Departments/pull/10)
 
-- **Original build** — I own the implementation or project design.
-- **Upstream extension / research adaptation** — I name the original project, my changes, their purpose, and the evidence produced.
-- **Team contribution** — I link merged pull requests or commits instead of presenting team work as solo authorship.
-- **Learning / reference** — unchanged or minimally changed reproductions, tutorials, notes, and source checkouts; these are not presented as portfolio projects.
+**LawGPT.** Submitted four independently installable RAG implementations in their designated directories, with host adapters and documented verification. Graph retrieval uses hierarchical communities, Wiki retrieval navigates compiled Markdown, the retrieval agent selects tools iteratively, and the self-reflective workflow critiques drafts. PR #6 remains open as of November 21, 2026. The repository requires collaborator access.
 
-The public collaboration evidence above comes from merged work in [IDEAS-Incubator/LLM_Bootcamp_Native_RAG](https://github.com/IDEAS-Incubator/LLM_Bootcamp_Native_RAG). A private MATS research branch is an upstream-based OpenAI Agents SDK migration, not a from-scratch system. Learning artifacts include [nanoGPT Tiny Shakespeare](https://github.com/Pangqiang-Gary/nanoGPT-TinyShakespeare) and an unchanged [OpenLLMetry fork](https://github.com/Pangqiang-Gary/openllmetry).
+[Implementation and validation, PR #6](https://github.com/IDEAS-Incubator/LLM_Bootcamp_Lawgpt_CLI/pull/6)
 
-## Current focus
+**Native RAG.** Contributed a deterministic Wiki compiler, shared Core integration and a FastAPI adapter through merged pull requests.
 
-Reliable RAG · Agent evaluation · LLM observability · Quantitative and time-series ML · AI safety
+[Compiler #1](https://github.com/IDEAS-Incubator/LLM_Bootcamp_Native_RAG/pull/1) · [Core migration #4](https://github.com/IDEAS-Incubator/LLM_Bootcamp_Native_RAG/pull/4) · [API adapter #6](https://github.com/IDEAS-Incubator/LLM_Bootcamp_Native_RAG/pull/6)
+
+## Additional work
+
+My private workspaces include solar-model reproduction and uncertainty experiments, a schema-driven tool dependency graph, contract-review agents, hierarchical configuration services, local prompt-injection experiments, and agent cost/evaluation tooling. Repository documentation records upstream provenance, implementation scope and validation limits.
+
+[MF query generator coursework](https://github.com/Pangqiang-Gary/CS562-final) · [Contribution details](CONTRIBUTIONS.md)
+
+## Engineering practice
+
+- Preserve source IDs and data provenance through retrieval and generation.
+- Make failure states, review limits and evaluation assumptions explicit.
+- Keep model and data claims linked to reproducible tests or recorded experiments.
+- Attribute upstream systems and distinguish original code, adaptations and team contributions.
 
